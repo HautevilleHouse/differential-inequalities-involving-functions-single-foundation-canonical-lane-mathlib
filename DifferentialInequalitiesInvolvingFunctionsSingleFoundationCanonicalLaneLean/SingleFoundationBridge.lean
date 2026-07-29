@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean.FunctionInequalityDomain
+import DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean.DifferentialInequalityPackage
+
+namespace HautevilleHouse
+namespace DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean
+
+structure SingleFoundationBridge (D : FunctionInequalityDomain) where
+  bridgeCondition : Prop
+  bridgeWitness : bridgeCondition
+
+theorem bridge_from_theory (D : FunctionInequalityDomain) (B : SingleFoundationBridge D) :
+    B.bridgeCondition := by
+  exact B.bridgeWitness
+
+end DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean
+end HautevilleHouse

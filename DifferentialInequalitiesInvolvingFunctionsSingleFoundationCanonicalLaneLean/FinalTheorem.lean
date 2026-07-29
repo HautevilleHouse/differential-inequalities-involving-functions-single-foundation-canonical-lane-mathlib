@@ -1,0 +1,16 @@
+import canonicalLaneMathlib.AdmissibleClass
+import DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean.DifferentialFunctionInequalities
+import DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean.SingleFunctionEstimate
+
+namespace HautevilleHouse
+namespace DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean
+
+def ConstrainedDifferentialInequalityClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_differential_inequality_endgame (A : AdmissibleClass) :
+    ConstrainedDifferentialInequalityClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end DifferentialInequalitiesInvolvingFunctionsSingleFoundationCanonicalLaneLean
+end HautevilleHouse
